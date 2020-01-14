@@ -3,6 +3,7 @@ module github.com/tsenart/vegeta
 go 1.13
 
 require (
+	github.com/DataDog/datadog-go v3.3.1+incompatible
 	github.com/alecthomas/jsonschema v0.0.0-20180308105923-f2c93856175a
 	github.com/bmizerany/perks v0.0.0-20141205001514-d9a9656a3a4b
 	github.com/c2h5oh/datasize v0.0.0-20171227191756-4eba002a5eae
@@ -22,6 +23,7 @@ require (
 	github.com/mailru/easyjson v0.0.0-20180823135443-60711f1a8329
 	github.com/miekg/dns v1.1.17
 	github.com/streadway/quantile v0.0.0-20150917103942-b0c588724d25
+	github.com/stretchr/testify v1.4.0 // indirect
 	github.com/tsenart/go-tsz v0.0.0-20180814232043-cdeb9e1e981e
 	golang.org/x/net v0.0.0-20190827160401-ba9fcec4b297
 )

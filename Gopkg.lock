@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:af85ab47334972b4b9b399a34f96f1403e5fe1b5dd51716c915d5bf633714f95"
+  name = "github.com/DataDog/datadog-go"
+  packages = ["statsd"]
+  pruneopts = "UT"
+  revision = "f965411cb1094bacec60a92cfd4f4258fef1990c"
+  version = "v3.3.1"
+
+[[projects]]
   branch = "master"
   digest = "1:c312c313bb8040fcfb5698f38b51ec279e4635c7619773e6f018c908586c64b1"
   name = "github.com/alecthomas/jsonschema"
@@ -76,6 +84,14 @@
   revision = "60711f1a8329503b04e1c88535f419d0bb440bff"
 
 [[projects]]
+  digest = "1:b0964eafd082596f6ae1910b2a0ed29d2f2c6a5094b7ac6598605cba25d2b8ac"
+  name = "github.com/miekg/dns"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "6c0c4e6581f8e173cc562c8b3363ab984e4ae071"
+  version = "v1.1.27"
+
+[[projects]]
   branch = "master"
   digest = "1:7ca2584fa7da0520cd2d1136a10194fe5a5b220bdb215074ab6f7b5ad91115f4"
   name = "github.com/shurcooL/httpfs"
@@ -112,16 +128,40 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:dca4094c3be476189bd5854752edbd1bd3d15e61d9570dd9133744bb1ecd599d"
+  digest = "1:cd7e85fc3687e062714febdee3e8efeb00a413a2a620d28908fd0258261d2353"
+  name = "golang.org/x/crypto"
+  packages = [
+    "ed25519",
+    "ed25519/internal/edwards25519",
+  ]
+  pruneopts = "UT"
+  revision = "61a87790db17894570dfb32dbaa0a4af9ce60cb4"
+
+[[projects]]
+  branch = "master"
+  digest = "1:eb816361177713f91e2f624d3fa496a7a0eadb60f1a283036fe55ccc9e84b205"
   name = "golang.org/x/net"
   packages = [
+    "bpf",
     "http/httpguts",
     "http2",
     "http2/hpack",
     "idna",
+    "internal/iana",
+    "internal/socket",
+    "ipv4",
+    "ipv6",
   ]
   pruneopts = "UT"
   revision = "c39426892332e1bb5ec0a434a079bf82f5d30c54"
+
+[[projects]]
+  branch = "master"
+  digest = "1:e13350b7207ecc34977340d53522e0335dd36ed86ca7c346a36d2e88eb0fadfc"
+  name = "golang.org/x/sys"
+  packages = ["unix"]
+  pruneopts = "UT"
+  revision = "548cf772de5052aa878ccb47cdeb7d262b75c8ec"
 
 [[projects]]
   digest = "1:a2ab62866c75542dd18d2b069fec854577a20211d7c0ea6ae746072a1dccdd18"
@@ -146,10 +186,29 @@
   revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
   version = "v0.3.0"
 
+[[projects]]
+  branch = "master"
+  digest = "1:0634daeabb9e4634a767484386c217e9ebfd0b270280e13f38dc7e67c65879e3"
+  name = "golang.org/x/tools"
+  packages = [
+    "go/ast/astutil",
+    "go/gcexportdata",
+    "go/internal/gcimporter",
+    "go/internal/packagesdriver",
+    "go/packages",
+    "go/types/typeutil",
+    "internal/fastwalk",
+    "internal/gopathwalk",
+    "internal/semver",
+  ]
+  pruneopts = "UT"
+  revision = "eac381796e91db0acd689726cce5b78086509607"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/DataDog/datadog-go/statsd",
     "github.com/alecthomas/jsonschema",
     "github.com/bmizerany/perks/quantile",
     "github.com/c2h5oh/datasize",
@@ -160,6 +219,7 @@
     "github.com/mailru/easyjson",
     "github.com/mailru/easyjson/jlexer",
     "github.com/mailru/easyjson/jwriter",
+    "github.com/miekg/dns",
     "github.com/shurcooL/vfsgen",
     "github.com/streadway/quantile",
     "github.com/tsenart/go-tsz",
